@@ -9,15 +9,15 @@ from sklearn.metrics.pairwise import cosine_similarity
 # model_folder = './cache/emploitic-tsdae'
 # MohammedDhiyaEddine/tsdae-distiluse-roberta-alldata
 
-tokenizer = AutoTokenizer.from_pretrained("MohammedDhiyaEddine/tsdae-distiluse-roberta-alldata")
-model = SentenceTransformer("MohammedDhiyaEddine/tsdae-distiluse-roberta-alldata")
+tokenizer = AutoTokenizer.from_pretrained("/content/tsdae-model")
+model = SentenceTransformer("/content/tsdae-model")
 
 TOP_K = 10
 
-EVAL_DATA_FILE = '../data/eval_data_emploitic.tsv'
-ENTITIES_FILE = '../data/entities_emploitic.txt'
-LOGS_FILE = '../output/tsdae-emploitic/distiluse-roberta/all/logs_k'+ str(TOP_K) +'.txt'
-RANKS_FILE = '../output/tsdae-emploitic/distiluse-roberta/all/ranks_k'+ str(TOP_K) +'.txt'
+EVAL_DATA_FILE = './data/eval_data_emploitic.tsv'
+ENTITIES_FILE = './data/entities_emploitic.txt'
+LOGS_FILE = './output/tsdae-emploitic/distiluse-roberta/all/logs_k'+ str(TOP_K) +'.txt'
+RANKS_FILE = './output/tsdae-emploitic/distiluse-roberta/all/ranks_k'+ str(TOP_K) +'.txt'
 
 import time
 start = time.time()
